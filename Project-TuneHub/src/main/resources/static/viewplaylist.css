@@ -1,0 +1,80 @@
+html {
+	background-image: url('/images/back.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+}
+
+li a:hover {
+  background-color: lightgray;
+}
+
+li img {
+  vertical-align: middle;
+}
+
+li:last-child {
+  float: right;
+}
+
+.playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+	
+}
+
+.playlists {
+  width: calc(50.00% - 20px); /* Adjust the width as per your requirement */
+  margin-bottom: 20px;
+  margin-top:10px;
+  color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.playlists h3 {
+  margin-top: 0;
+}
+
+.playlists ul {
+  list-style: none;
+  padding: 5px;
+  background-color: rgba(42, 40, 40, 0.235);
+}
+
+.playlists ul li {
+  margin-bottom: 5px;
+}
+
+.playlists audio {
+  margin-top: 5px;
+  display: block;
+}
+@media only screen and (min-width: 100px) {
+  html {
+	height: 100%;
+	width: 100%;
+  }
+}

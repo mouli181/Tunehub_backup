@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Song</title>
+<link rel=stylesheet type=text/css href="/addsong.css">
+</head>
+<body>
+	<ul>
+		<li><img src="/images/logo.jpg" alt="logo" width="50px"
+			height="46px" /></li>
+		<li><a href="index">Tunehub</a></li>
+		
+
+		<li style="float: right"><a class="Sign in" href="logout">Logout</a>
+		</li>
+
+	</ul>
+	<div>
+		<h2>Add New Song</h2>
+		<form action="addsong" method="get">
+			<label for="name">Name:</label><br> <input type="text" id="name"
+				name="name" placeholder="enter the song name"><br> <br>
+			<label for="artist">Artist:</label><br> <input type="text"
+				id="artist" name="artist" placeholder="enter the artist name"><br>
+			<br> <label for="genre">Genre:</label><br> <input
+				type="text" id="genre" name="genre"
+				placeholder="enter the genre type"><br> <br> <label
+				for="link">Link:</label><br> <input type="text" id="link"
+				name="link" placeholder="enter the link"><br> <br>
+			<input type="submit" value="Add Song">
+		</form>
+	</div>
+</body>
+</html>

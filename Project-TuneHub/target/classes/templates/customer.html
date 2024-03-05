@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.orh">
+<head>
+<meta charset="UTF-8">
+<title>Listeners</title>
+<link rel=stylesheet type=text/css href="/customer.css">
+</head>
+<body>
+	<ul>
+      <li><img src="/images/logo.jpg" alt="logo" width="50px" height="46px" /></li>
+      
+      <li><a href="index" class="home">Home</a></li>
+
+      <li style="float: right">
+        <a class="logout" href="logout">Logout</a>
+      </li>
+    </ul>
+	<div th:unless=${ispremium} class="non-premium"><br><br>
+		<h2>Welcome to Tunehub</h2>
+      
+      <h4>
+        Ready to unlock premium features? Upgrade now for an ad-free experience
+        and exclusive perks.
+      </h4>
+      <form action="pay" method="get">
+        <input type="submit" value="Explore Premium" />
+      </form>
+      <h4>Already a member? Dive in and let the music play.</h4>
+
+      <form action="logout" method="get">
+        <input type="submit" value="Logout" />
+      </form>
+	</div>
+	<div th:if=${ispremium} class="premium">
+		<div class="song-list">
+        <div th:each="song:${songs}" class="song">
+          <div class="song-details">
+            <h3 th:text="${song.name}"></h3>
+            <p>Artist: <span th:text="${song.artist}"></span></p>
+            <p>Genre: <span th:text="${song.genre}"></span></p>
+          </div>
+          <div class="song-player">
+            <audio controls>
+              <source th:src="${song.link}" />
+            </audio>
+          </div>
+        </div>
+	</div>
+	</div>
+</body>
+</html>

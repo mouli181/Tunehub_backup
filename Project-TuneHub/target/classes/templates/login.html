@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel=stylesheet type=text/css href="/login.css">
+</head>
+<body>
+	<ul>
+        <li><img src="/images/logo.jpg" alt="logo" width="50px" height="46px" /></li>
+        
+        <li><a href="index" class="home">Home</a></li>
+        
+  
+        
+        <li style="float: right">
+          <a class="Sign in" href="registeration">Sign up</a>
+        </li>
+      </ul>
+	 <div class="main">
+      <h2>Welcome back</h2>
+      <form action="validate" method="get">
+        <label for="email">Username</label>
+        <input type="email" name="email" placeholder="enter your email" required/><br />
+        <label>Password</label>
+        <input type="password" name="password" placeholder="enter your password" required/><br />
+        <input type="submit" value="Login" />
+      </form>
+      <br>
+      <div class="sub">
+      <label>Don't have an account? </label>
+      <a href="registeration">Create an account</a>
+      </div>
+    </div>
+</body>
+</html>

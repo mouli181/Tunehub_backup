@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registeration Form</title>
+<link rel=stylesheet type=text/css href="/registeration.css">
+</head>
+<body>
+	 <ul>
+        <li><img src="/images/logo.jpg" alt="logo" width="50px" height="46px" /></li>
+        <!-- <li><a href="#">Tunehub</a></li> -->
+        <li><a href="index" class="home">Home</a></li>
+        
+        
+        
+        <!-- <li style="float: right">
+          <a class="Sign in" href="logout">Logout</a>
+        </li> -->
+        <li style="float: right">
+            <a class="Sign in" href="login">Login</a>
+          </li>
+      </ul>
+	<div>
+	<h2>Sign up to start listening</h2>
+	<form action="register" method="get">
+	<label>Username </label><br>
+	<input type="text" name="username" placeholder="enter your username" required>
+	<br><br>
+	<label>Email  </label><br>
+	<input type="email" name="email" placeholder="name@domain.com" required>
+	<br><br>
+	<label>Password </label><br> 
+	<input type="password" name="password" placeholder="enter your password" required>
+	<br><br>
+	<label>Gender  </label><br>
+	<input type="radio" name="gender" value="male" required> Male
+	<input type="radio" name="gender" value="female"> Female
+	<input type="radio" name="gender" value="other"> Other
+	<br><br>
+	<label>Role </label><br>
+	<input type="radio" name="role" value="Admin" required> Admin
+	<input type="radio" name="role" value="Customer"> Customer
+	<br><br>
+	<label>Address </label><br>
+	<textarea name="address" placeholder="enter your address" required></textarea><br><br>
+	<input type="submit" value="Register">
+	</form>
+	</div>
+</body>
+</html>

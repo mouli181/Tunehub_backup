@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Songs</title>
+<link rel=stylesheet type=text/css href="/displaysongs.css">
+
+</head>
+<body>
+	<ul>
+		<li><img src="/images/logo.jpg" alt="logo" width="50px"
+			height="46px" /></li>
+		
+		<li><a href="index" class="home">Home</a></li>
+
+		<li style="float: right"><a href="logout">Logout</a>
+		</li>
+	</ul>
+	<!-- <div class="tablecontainer">
+	<table border=2>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Artist</th>
+				<th>Genre</th>
+				<th>Play</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="song:${songs}">
+				<td th:text="${song.name}"></td>
+				<td th:text="${song.artist}"></td>
+				<td th:text="${song.genre}"></td>
+				<td><audio controls>
+						<source th:src="${song.link}">
+					</audio>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div> -->
+	<div class="song-list">
+        <div th:each="song:${songs}" class="song" >
+          <div class="song-details">
+            <h3 th:text="${song.name}"></h3>
+            <p>Artist: <span th:text="${song.artist}"></span></p>
+            <p>Genre: <span th:text="${song.genre}"></span></p>
+          </div>
+          <div class="song-player">
+            <audio controls>
+              <source th:src="${song.link}" />
+            </audio>
+          </div>
+        </div>
+	</div>
+</body>
+</html>

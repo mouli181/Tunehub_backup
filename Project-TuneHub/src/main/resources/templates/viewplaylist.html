@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View playlist</title>
+<link rel=stylesheet type=text/css href="/viewplaylist.css">
+</head>
+<body>
+	<ul>
+      <li><img src="/images/logo.jpg" alt="logo" width="50px" height="46px" /></li>
+      
+      <li><a href="index" class="home">Home</a></li>
+
+      <li style="float: right">
+        <a class="logout"  href="logout">Logout</a>
+      </li>
+    </ul>
+	<!-- <div class="tablecontainer">
+		<table border=1>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Name</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="all:${playlist}">
+					<td th:text="${all.id}"></td>
+					<td>
+						<ul>
+							<li th:each="song:${all.songs}">
+							<span th:text="${song.name}"></span>
+							<span th:text="${song.artist}"></span>
+							<span th:text="${song.genre}"></span>
+							<audio controls>
+								<source th:src="${song.link}">
+							</audio>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> -->
+	<div class="playlist-container">
+    <div th:each="all : ${playlist}" class="playlists">
+        <h3 th:text="${all.playlistname}"></h3>
+        <ul>
+            <li th:each="song : ${all.songs}">
+                <span th:text="${song.name}"></span>
+               <!--  <span th:text="${song.artist}"></span>
+                <span th:text="${song.genre}"></span> -->
+                <audio controls>
+                    <source th:src="${song.link}">
+                </audio>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

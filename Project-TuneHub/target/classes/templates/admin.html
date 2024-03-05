@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin page</title>
+<link rel=stylesheet type=text/css href="/admin.css">
+</head>
+<body>
+<ul>
+      <li><img src="/images/logo.jpg" alt="logo" width="50px" height="46px" /></li>
+
+      <li><a href="index" class="home">Home</a></li>
+
+      <li style="float: right">
+        <a class="Sign in" href="logout">Logout</a>
+      </li>
+      
+    </ul>
+	<div class="main">
+		<h2>Admin Dashboard</h2>
+			<form action="addsong" method="get">
+				
+				<input type="submit" value="Add Songs">
+			</form>
+		
+			<form action="viewsong" method="post">
+				
+				<input type="submit" value="View Songs">
+			</form>
+		
+			<form action="playlist" method="post">
+				
+				<input type="submit" value="Create Playlist">
+			</form>
+		
+			<form action="viewplaylist" method="post">
+				
+				<input type="submit" value="view Playlist">
+			</form>
+
+			<form action="updateplaylist" method="post">
+				
+				<input type="submit" value="Update Playlist" />
+			</form>
+	</div>
+</body>
+</html>

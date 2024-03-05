@@ -1,0 +1,72 @@
+html {
+	background-image: url('/images/back.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+}
+
+li a:hover {
+  background-color: lightgray;
+}
+
+li img {
+  vertical-align: middle;
+}
+
+li:last-child {
+  float: right;
+}
+
+.main{
+  border-radius: 8px;
+  background-color: rgba(42, 40, 40, 0.235);
+  
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+button{
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+button:hover{
+  background-color: rgba(42, 40, 40, 0.235);
+  color: white;
+}
+p{
+  color:chartreuse;
+}
+@media only screen and (min-width: 100px) {
+  html {
+	height: 100%;
+	width: 100%;
+  }
+}
